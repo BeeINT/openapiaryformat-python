@@ -27,8 +27,8 @@ apiary2 = {
 	"description" : "",
 }
 apiary2["location"] =  {
-      "latitude": 0.023,
-      "longitude": 0.123
+      "latitude": 50.0724825,
+      "longitude": 8.2483534
     },
 apiaries.append(apiary2)
 
