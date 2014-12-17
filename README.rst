@@ -6,4 +6,4 @@ This is a reference implementation and example scripts for the openapiaryformat.
 Example Simple
 -----------------
 
-Take a look at the example_simple.py script on how to get a quick and basic introduction.
+Take a look at the ``example_simple.py`` script on how to get a quick and basic introduction.
