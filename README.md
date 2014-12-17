@@ -1,2 +1,0 @@
-openapiaryformat-python
-=======================
