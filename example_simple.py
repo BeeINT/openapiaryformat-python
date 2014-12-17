@@ -4,6 +4,9 @@
 # This example covers a very basic example implementation on how to create
 # a valid ouput in the openapiaryformat. 
 
+# This is more or less basic python object and json handling and can 
+# hopefully get beginner going.
+
 import json
 
 
@@ -34,4 +37,23 @@ apiaries.append(apiary2)
 
 
 
-print json.dumps(apiaries,  encoding="utf-8", indent=2)
+output_string = json.dumps(apiaries,  encoding="utf-8", indent=2)
+print "--------------Generated Data-----------------"
+print output_string
+print "---------------------------------------------\n"
+
+
+apiaries_loaded = json.loads(output_string)
+print "----------------Loaded Data------------------"
+print apiaries_loaded
+print "---------------------------------------------\n"
+
+
+print "--------------Iterating Data-----------------"
+for apiary in apiaries_loaded:
+	print apiary["name"]
+print "---------------------------------------------\n"
+
+
+
+
