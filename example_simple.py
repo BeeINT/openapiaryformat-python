@@ -24,8 +24,12 @@ apiaries.append(apiary1)
 apiary2 = {
 	"name" : "The Second One",
 	"type" : "apiary",
-	"description" : ""
+	"description" : "",
 }
+apiary2["location"] =  {
+      "latitude": 0.023,
+      "longitude": 0.123
+    },
 apiaries.append(apiary2)
 
 
