@@ -18,7 +18,8 @@ class Tox(TestCommand):
         sys.exit(errno)
 
 tests_require = [
-    'tox'
+    'tox',
+    'virtualenv'
 ]
 
 dependency_links = [

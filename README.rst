@@ -1,6 +1,9 @@
 openapiaryformat-python
 =======================
 
+
+|travis|
+
 This is a reference implementation and example scripts for the openapiaryformat. Take a look at the description at https://github.com/BeeINT/openapiaryformat-reference
 
 Example Simple
@@ -19,3 +22,10 @@ Tests
 ------
 
 Just execute ``python setup test`` in the project root.
+
+
+
+.. |travis| image:: https://api.travis-ci.org/BeeINT/openapiaryformat-python.png
+    :alt: Travis Status
+    :scale: 100%
+    :target: https://travis-ci.org/BeeINT/openapiaryformat-python
