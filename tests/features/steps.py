@@ -6,17 +6,18 @@ sys.path.append(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
 
 from beeint import Apiary
 
+
 @step
 def have_an_apiary(step):
     u'^Given I have a new Apiary$'
     world.apiary = Apiary()
+
 
 @step
 def have_an_apiary_with_name(step, name):
     u'^Given I have a new Apiary with the name "([^"]*)"$'
 
     world.apiary = Apiary(name)
-
 
 
 @step
