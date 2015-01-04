@@ -18,4 +18,4 @@ Example Advanced
 Tests
 ------
 
-To execute the tests install the requirements from the ``requirements-test.txt``, go into the ``tests`` directory and execute ``lettuce``
+Just execute ``python setup test`` in the project root.
