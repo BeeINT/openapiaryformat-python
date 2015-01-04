@@ -1,14 +1,11 @@
 language: python
 python: 2.7
-
 env:
   - TOX_ENV=pep8
   - TOX_ENV=pypy
   - TOX_ENV=py26
   - TOX_ENV=py27
-
 install:
   - pip install --upgrade pip setuptools tox virtualenv
-
-script: :
+script: 
   - tox -v -v -e $TOX_ENV
