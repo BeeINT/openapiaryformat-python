@@ -13,16 +13,12 @@ import json
 
 apiaries = []
 
-
-
 apiary1 = {
 	"name" : "My First Apiary",
 	"type" : "apiary",
 	"description": "This was the initial Apiary"
 }
 apiaries.append(apiary1)
-
-
 
 apiary2 = {
 	"name" : "The Second One",
