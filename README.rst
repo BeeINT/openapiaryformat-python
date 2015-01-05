@@ -21,7 +21,15 @@ Example Advanced
 Tests
 ------
 
-Just execute ``python setup test`` in the project root.
+The tests infrastructure use a combination of tox_ and `Travis CI`_.
+
+For your personal tests, you can execute ``python setup test`` in the project root. This will use tox and execute all the environments.
+
+You can also use tox directly and executing specific build targets. For example: ``tox -v -e pypy`` or ``tox -e pep8``. 
+
+Take a look at the ``tox.ini`` or ``.travis.yml`` for the current configurations of executed tests for each git push.
+
+
 
 
 
@@ -29,3 +37,6 @@ Just execute ``python setup test`` in the project root.
     :alt: Travis Status
     :scale: 100%
     :target: https://travis-ci.org/BeeINT/openapiaryformat-python
+
+.. _tox: https://tox.readthedocs.org/
+.. _Travis CI: https://travis-ci.org/
