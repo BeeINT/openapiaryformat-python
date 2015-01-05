@@ -23,13 +23,16 @@ Tests
 
 The tests infrastructure uses a combination of lettuce_, tox_, coveralls_ and `Travis CI`_.
 
-For your personal tests, you can execute tox directly executing specific build targets. The For example: ``tox -v -e py27`` for the lettuce tests or ``tox -e pep8`` for the pep8 checks. 
+For your personal tests, you can execute tox directly executing specific build targets. This has to be done in the ``tests`` directory. 
+
+Install the tests requirements with ``pip install -r requirements-test.txt``
+
+Now run the tests. The For example: ``tox -v -e py27`` for the lettuce tests or ``tox -e pep8`` for the pep8 checks. 
 
 For coverage checks, you can get your report this way:
 
 .. code-block:: bash
 
-   cd tests  # change into tests directory
    coverage run `which lettuce`
    coverage report
 
