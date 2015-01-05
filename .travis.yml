@@ -9,3 +9,5 @@ install:
   - pip install --upgrade pip setuptools tox virtualenv
 script: 
   - tox -v -v -e $TOX_ENV
+after_success:  
+  - coveralls    
