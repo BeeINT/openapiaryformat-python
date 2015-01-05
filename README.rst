@@ -2,7 +2,7 @@ openapiaryformat-python
 =======================
 
 
-|travis|
+|travis| |coverall|
 
 This is a reference implementation and example scripts for the openapiaryformat. Take a look at the description at https://github.com/BeeINT/openapiaryformat-reference
 
@@ -21,7 +21,7 @@ Example Advanced
 Tests
 ------
 
-The tests infrastructure uses a combination of tox_ and `Travis CI`_.
+The tests infrastructure uses a combination of tox_, coveralls_ and `Travis CI`_.
 
 For your personal tests, you can execute ``python setup test`` in the project root. This will use tox and execute all the environments.
 
@@ -38,5 +38,10 @@ Take a look at the ``tox.ini`` or ``.travis.yml`` for the current configurations
     :scale: 100%
     :target: https://travis-ci.org/BeeINT/openapiaryformat-python
 
+
+.. |coverall|  image:: https://coveralls.io/repos/BeeINT/openapiaryformat-python/badge.png?branch=master :target: https://coveralls.io/r/BeeINT/openapiaryformat-python?branch=master
+
+
 .. _tox: https://tox.readthedocs.org/
-.. _Travis CI: https://travis-ci.org/
+.. _Travis CI: https://travis-ci.org/BeeINT/openapiaryformat-python
+.. _coveralls: https://coveralls.io/r/BeeINT/openapiaryformat-python
