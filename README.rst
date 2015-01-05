@@ -29,6 +29,7 @@ For coverage checks, you can get your report this way:
 
 .. code-block:: bash
 
+   cd tests  # change into tests directory
    coverage run `which lettuce`
    coverage report
 
