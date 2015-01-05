@@ -21,11 +21,16 @@ Example Advanced
 Tests
 ------
 
-The tests infrastructure uses a combination of tox_, coveralls_ and `Travis CI`_.
+The tests infrastructure uses a combination of lettuce_, tox_, coveralls_ and `Travis CI`_.
 
-For your personal tests, you can execute ``python setup test`` in the project root. This will use tox and execute all the environments.
+For your personal tests, you can execute tox directly executing specific build targets. The For example: ``tox -v -e py27`` for the lettuce tests or ``tox -e pep8`` for the pep8 checks. 
 
-You can also use tox directly and executing specific build targets. For example: ``tox -v -e pypy`` or ``tox -e pep8``. 
+For coverage checks, you can get your report this way:
+
+.. code-block:: bash
+
+   coverage run `which lettuce`
+   coverage report
 
 Take a look at the ``tox.ini`` or ``.travis.yml`` for the current configurations of executed tests for each git push.
 
@@ -42,7 +47,7 @@ Take a look at the ``tox.ini`` or ``.travis.yml`` for the current configurations
 .. |coverall|  image:: https://coveralls.io/repos/BeeINT/openapiaryformat-python/badge.png?branch=master
     :target: https://coveralls.io/r/BeeINT/openapiaryformat-python?branch=master
 
-
+.. _lettuce: http://lettuce.it/
 .. _tox: https://tox.readthedocs.org/
 .. _Travis CI: https://travis-ci.org/BeeINT/openapiaryformat-python
 .. _coveralls: https://coveralls.io/r/BeeINT/openapiaryformat-python
