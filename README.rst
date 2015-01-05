@@ -21,7 +21,7 @@ Example Advanced
 Tests
 ------
 
-The tests infrastructure use a combination of tox_ and `Travis CI`_.
+The tests infrastructure uses a combination of tox_ and `Travis CI`_.
 
 For your personal tests, you can execute ``python setup test`` in the project root. This will use tox and execute all the environments.
 
