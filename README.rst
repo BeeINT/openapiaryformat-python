@@ -39,7 +39,8 @@ Take a look at the ``tox.ini`` or ``.travis.yml`` for the current configurations
     :target: https://travis-ci.org/BeeINT/openapiaryformat-python
 
 
-.. |coverall|  image:: https://coveralls.io/repos/BeeINT/openapiaryformat-python/badge.png?branch=master :target: https://coveralls.io/r/BeeINT/openapiaryformat-python?branch=master
+.. |coverall|  image:: https://coveralls.io/repos/BeeINT/openapiaryformat-python/badge.png?branch=master
+    :target: https://coveralls.io/r/BeeINT/openapiaryformat-python?branch=master
 
 
 .. _tox: https://tox.readthedocs.org/
