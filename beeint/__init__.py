@@ -13,7 +13,6 @@ def generate_id(seed=False):
 
 
 
-
 def history_logging(function):
     """ decorator to enable history logging for subclasses of the HistoryAware object"""
     def wrapper(*args, **kwargs):
@@ -24,48 +23,39 @@ def history_logging(function):
     return wrapper
 
 
-
-
-
-
-
 class HistoryAware(object):
 
-    history_attributes  = []
-
+    history_attributes = []
 
     @classmethod
-    def __add_attribute(clas, attribute): 
+    def __add_attribute(clas, attribute):
         """Creates dynamic attributes on classes as propertys. It decorates the property setter with the "history_logging" function """
         getter = lambda self: getattr(self, "_{0}__{1}".format(clas, attribute), False)
         getter.__name__ = attribute
 
         setter_intern = lambda self, value: setattr(self, "_{0}__{1}".format(clas, attribute), value)
         setter_intern.__name__ = attribute
-        setter = history_logging(setter_intern)    
+        setter = history_logging(setter_intern)
 
-        setattr(clas, attribute, 
-            property( 
-                getter,
-                setter
-            )
-        )
+        setattr(clas, attribute,
+                property(
+                    getter,
+                    setter
+                )
+                )
 
     @classmethod
     def finish_initialization(the_class):
         """ This function must be called after a child Class gets initialized. It creates the "history_attributes" for the child class."""
         the_class.initialized = True
-        for attribute in the_class.history_attributes :
-                the_class.__add_attribute( attribute)
-
+        for attribute in the_class.history_attributes:
+                the_class.__add_attribute(attribute)
 
     def __init__(self):
         if not getattr(self, "initialized", False):
             raise Exception("finish_initialization() was not called on the {0} Class".format(type(self).__name__))
         self.__history = []
         self.enable_history = False
-        
-
 
     def _add_history(self, key, value_old, value_new, date=None):
         entry = {
@@ -79,7 +69,6 @@ class HistoryAware(object):
 
         }
         self.__history.append(entry)
-
 
     @property
     def history(self):
