@@ -1,22 +1,20 @@
 import beeint
-import datetime
 
 
 
 
-class Apiary(beeint.HistoryAware):
+class Hive(beeint.HistoryAware):
 
     history_attributes = [
         "name", 
         "description",
-        "location"
+        "apiary"
     ]
 
-    def __init__(self, name=False, id=beeint.generate_id(), enable_history=False):
-        super(Apiary, self).__init__()
-        self.type = beeint.TYPE_APIARY
+    def __init__(self, name=False, enable_history=False):
+        super(Hive, self).__init__()
+        self.type = beeint.TYPE_HIVE
         self.name = name
-        self.id = id
         self.enable_history = enable_history
 
     def __str__(self):
