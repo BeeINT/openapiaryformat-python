@@ -1,4 +1,4 @@
-from beeint import Apiary
+from beeint import Apiary, Hive
 
 a = Apiary("My First Hive")
 print a.name
@@ -12,3 +12,9 @@ b.description = "this is inte"
 print b.name
 print b.dumps()
 print b.id
+
+
+
+
+h = Hive("t")
+print h

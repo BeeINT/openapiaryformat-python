@@ -1,13 +1,9 @@
 import beeint
-import datetime
-
-
 
 
 class Apiary(beeint.HistoryAware):
-
     history_attributes = [
-        "name", 
+        "name",
         "description",
         "location"
     ]
@@ -25,3 +21,5 @@ class Apiary(beeint.HistoryAware):
     def dumps(self):
         return self.history
 
+
+Apiary.finish_initialization()

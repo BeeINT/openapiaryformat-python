@@ -1,12 +1,10 @@
 import beeint
 
 
-
-
 class Hive(beeint.HistoryAware):
 
     history_attributes = [
-        "name", 
+        "name",
         "description",
         "apiary"
     ]
@@ -23,3 +21,5 @@ class Hive(beeint.HistoryAware):
     def dumps(self):
         return self.history
 
+
+Hive.finish_initialization()
