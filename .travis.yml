@@ -5,6 +5,7 @@ env:
   - TOX_ENV=pypy
   - TOX_ENV=py26
   - TOX_ENV=py27
+  - TOX_ENV=py27_coverage
 install:
   - pip install --upgrade pip setuptools tox virtualenv
 script: 
