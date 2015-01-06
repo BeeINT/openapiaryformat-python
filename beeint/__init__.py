@@ -12,7 +12,6 @@ def generate_id(seed=False):
     return hashlib.sha224(str(seed) + str(datetime.datetime.now())).hexdigest()
 
 
-
 def history_logging(function):
     """ decorator to enable history logging for subclasses of the HistoryAware object"""
     def wrapper(*args, **kwargs):
@@ -53,7 +52,7 @@ class HistoryAware(object):
 
     def __init__(self):
         if not getattr(self, "initialized", False):
-            raise Exception("finish_initialization() was not called on the {0} Class".format(type(self).__name__))# pragma: no cover
+            raise Exception("finish_initialization() was not called on the {0} Class".format(type(self).__name__))  # pragma: no cover
         self.__history = []
         self.enable_history = False
 

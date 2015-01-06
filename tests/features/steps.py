@@ -40,36 +40,40 @@ def set_the_attribute(step, attribute, value):
 @step
 def see_the_attribute(step, attribute, value):
     u'I see the ([^"]*) is "([^"]*)"'
-    assert getattr(world.testobj, attribute) == value, "Got %s" % getattr(world.testobj, attribute) 
+    assert getattr(world.testobj, attribute) == value, "Got %s" % getattr(world.testobj, attribute)
+
 
 @step
 def see_the_attribute_is_false(step, attribute):
     u'I see the ([^"]*) is False'
-    assert getattr(world.testobj, attribute) == False, "Got %s" % getattr(world.testobj, attribute)
+    assert getattr(world.testobj, attribute) is False, "Got %s" % getattr(world.testobj, attribute)
+
 
 @step
 def see_the_attribute_is_of_size(step, attribute, size):
     u'I see the ([^"]*) is of size ([^"]*)'
     assert len(getattr(world.testobj, attribute)) == int(size), "Got %s, size %s" % (getattr(world.testobj, attribute), int(size))
 
+
 @step
 def activate_history(step):
     u'I activate the history'
     world.testobj.enable_history = True
+
 
 @step
 def deactivate_history(step):
     u'I deactivate the history'
     world.testobj.enable_history = False
 
+
 @step
 def default_representation(step, value):
     u'the default representation of the apiary object is "([^"]*)"'
-    assert str(world.testobj) == value, "Got %s" % str(world.testobj) 
+    assert str(world.testobj) == value, "Got %s" % str(world.testobj)
+
 
 @step
 def dumps_string_returnsize(step, value):
     u'dumps\(\) should return a string of ([^"]*) characters'
-    assert len(world.testobj.dumps()) == int(value), "Got %s" % str(len(world.testobj.dumps()) ) 
-
-    
+    assert len(world.testobj.dumps()) == int(value), "Got %s" % str(len(world.testobj.dumps()))
