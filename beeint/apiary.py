@@ -19,7 +19,10 @@ class Apiary(beeint.HistoryAware):
         return self.name
 
     def dumps(self):
-        return self.history
+        return """{
+    "name" : "%s",
+    "type" : "apiary"
+}""" % self.name
 
 
 Apiary.finish_initialization()

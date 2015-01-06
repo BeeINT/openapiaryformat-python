@@ -19,7 +19,10 @@ class Hive(beeint.HistoryAware):
         return self.name
 
     def dumps(self):
-        return self.history
+        return """{
+    "name" : "%s",
+    "type" : "hive"
+}""" % self.name
 
 
 Hive.finish_initialization()

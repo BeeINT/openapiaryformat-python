@@ -53,7 +53,7 @@ class HistoryAware(object):
 
     def __init__(self):
         if not getattr(self, "initialized", False):
-            raise Exception("finish_initialization() was not called on the {0} Class".format(type(self).__name__))
+            raise Exception("finish_initialization() was not called on the {0} Class".format(type(self).__name__))# pragma: no cover
         self.__history = []
         self.enable_history = False
 
