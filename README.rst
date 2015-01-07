@@ -2,7 +2,7 @@ openapiaryformat-python
 =======================
 
 
-|travis| |coverall| |readthedocs|
+|travis| |readthedocs| |coverall| 
 
 
 This is a reference implementation and example scripts for the openapiaryformat. Take a look at the description at https://github.com/BeeINT/openapiaryformat-reference
