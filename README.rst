@@ -2,7 +2,8 @@ openapiaryformat-python
 =======================
 
 
-|travis| |coverall|
+|travis| |coverall| |readthedocs|
+
 
 This is a reference implementation and example scripts for the openapiaryformat. Take a look at the description at https://github.com/BeeINT/openapiaryformat-reference
 
@@ -50,6 +51,11 @@ Take a look at the ``tox.ini`` or ``.travis.yml`` for the current configurations
 
 .. |coverall|  image:: https://coveralls.io/repos/BeeINT/openapiaryformat-python/badge.png?branch=master
     :target: https://coveralls.io/r/BeeINT/openapiaryformat-python?branch=master
+
+
+.. |readthedocs|  image:: https://readthedocs.org/projects/openapiaryformat-python/badge/?version=latest
+    :target: http://openapiaryformat-python.readthedocs.org/en/latest/
+
 
 .. _lettuce: http://lettuce.it/
 .. _tox: https://tox.readthedocs.org/
