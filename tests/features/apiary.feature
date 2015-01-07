@@ -16,6 +16,12 @@ Feature: Testing Basic Apiary Features
        Given I have a new Apiary
        Then I see the name is False
 
+   Scenario: Create new Apiary and check its history attributes
+       Given I have a new Apiary
+       Then the apiary has the attribute "name"
+       Then the apiary has the attribute "description"
+       Then the apiary has the attribute "location"
+
    Scenario: Basic history size Test without activating
        Given I have a new Apiary
        Then I see the history is of size 0

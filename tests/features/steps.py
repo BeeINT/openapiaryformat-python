@@ -77,3 +77,9 @@ def default_representation(step, value):
 def dumps_string_returnsize(step, value):
     u'dumps\(\) should return a string of ([^"]*) characters'
     assert len(world.testobj.dumps()) == int(value), "Got %s" % str(len(world.testobj.dumps()))
+
+
+@step
+def check_obj_attribute(step, obj, value):
+    u'the ([^"]*) has the attribute "([^"]*)"'
+    assert hasattr(world.testobj, value)   
