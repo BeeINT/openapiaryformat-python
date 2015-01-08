@@ -1,6 +1,5 @@
 Feature: Testing Basic Apiary Features
 
-
    Scenario: Create new Apiary with name and change it
        Given I have a new Apiary with the name "My Apiary"
        Then I see the name is "My Apiary"
@@ -16,28 +15,12 @@ Feature: Testing Basic Apiary Features
        Given I have a new Apiary
        Then I see the name is False
 
-   Scenario: Create new Apiary and check its history attributes
+   Scenario: Create new Apiary and check its dynamic attributes
        Given I have a new Apiary
        Then the apiary has the attribute "name"
        Then the apiary has the attribute "description"
        Then the apiary has the attribute "location"
 
-   Scenario: Basic history size Test without activating
-       Given I have a new Apiary
-       Then I see the history is of size 0
-       When I set the name to "My New Name"
-       Then I see the history is of size 0
-
-   Scenario: Basic history size Test with activating
-       Given I have a new Apiary
-       Then I see the history is of size 0
-       Then I activate the history
-       When I set the name to "My New Name"
-       Then I see the history is of size 1
-       Then I deactivate the history
-       When I set the name to "My Newer Name"
-       Then I see the history is of size 1
-       
     Scenario: Test the Apiary default name
        Given I have a new Apiary with the name "My Apiary"
        Then the default representation of the apiary object is "My Apiary"
