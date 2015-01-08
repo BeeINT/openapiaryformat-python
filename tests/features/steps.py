@@ -82,4 +82,4 @@ def dumps_string_returnsize(step, value):
 @step
 def check_obj_attribute(step, obj, value):
     u'the ([^"]*) has the attribute "([^"]*)"'
-    assert hasattr(world.testobj, value)   
+    assert hasattr(world.testobj, value)
